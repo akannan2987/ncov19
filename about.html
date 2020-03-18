@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Abhilash Kannan" />
+
+
+<title>About 2019-nCoV</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Studying COVID-19 coronavirus outbreak</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Home
+  </a>
+</li>
+<li>
+  <a href="about.html">
+    <span class="fa fa-info"></span>
+     
+    About 2019-nCoV
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-gear"></span>
+     
+    More
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Basics</li>
+    <li>
+      <a href="Data_prep.html">Data Preparation</a>
+    </li>
+    <li>
+      <a href="R_packages.html">Essential R packages</a>
+    </li>
+    <li>
+      <a href="Distance_measures.html">Distance measures</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Partition Clustering</li>
+    <li>
+      <a href="K_maeans.html">K-Means</a>
+    </li>
+    <li>
+      <a href="K_Medoids.html">K-Medoids</a>
+    </li>
+    <li>
+      <a href="CLARA.html">CLARA</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Heirarchial Clustering</li>
+    <li>
+      <a href="Agglo_Clus.html">Agglomerative Clustering</a>
+    </li>
+    <li>
+      <a href="Dend_comp.html">Dendogram comprisons</a>
+    </li>
+    <li>
+      <a href="heatmap.html">Heatmap Visualization</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Cluster Validation</li>
+    <li>
+      <a href="Clust_tend.html">Clustering tendency</a>
+    </li>
+    <li>
+      <a href="optimal_clust_identification.html">Optimal number of clusters</a>
+    </li>
+    <li>
+      <a href="valid_stats.html">Validation Statistics</a>
+    </li>
+    <li>
+      <a href="P_val_HC.html">P-value for Heirarchial Clustering</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Advanced Clustering</li>
+    <li>
+      <a href="Hybrid.html">Hybrid Methods</a>
+    </li>
+    <li>
+      <a href="Fuzzy.html">Fuzzy Clustering</a>
+    </li>
+    <li>
+      <a href="Model_based.html">Model-Based Clustering</a>
+    </li>
+    <li>
+      <a href="Density_based.html">Density-Based Clustering</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="mailto:abhilifesicizurich@gmail.com">
+    <span class="fa fa-question fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">About 2019-nCoV</h1>
+<h4 class="author">Abhilash Kannan</h4>
+<h4 class="date">3/17/2020</h4>
+
+</div>
+
+
+<style type="text/css">
+
+body{ /* Normal  */
+text-align: justify
+  
+      
+  }
+td {  /* Table  */
+  
+}
+h1.title {
+  
+  color: DarkRed;
+}
+h1 { /* Header 1 */
+  
+  color: DarkBlue;
+}
+h2 { /* Header 2 */
+    
+  color: DarkBlue;
+}
+h3 { /* Header 3 */
+  
+  font-family: "Times New Roman", Times, serif;
+  color: DarkBlue;
+}
+
+h4 { /* Header 4 */
+  
+  font-family: "Times New Roman", Times, serif;
+  color: DarkBlue;
+}
+
+h5 { /* Header 4 */
+  
+  font-family: "Times New Roman", Times, serif;
+  color: DarkBlue;
+}
+
+
+code.r{ /* Code block */
+    
+}
+pre { /* Code block - determines code spacing between lines */
+    
+}
+</style>
+<div id="brief-summary-about-2019-ncov" class="section level2">
+<h2>Brief summary about 2019-nCoV</h2>
+<p><em>Collected from different resources and publications</em>. </p>
+<div id="problem-statement" class="section level3">
+<h3>Problem statement</h3>
+<p>In late December 2019, patients presenting with viral pneumonia due to an unidentified microbial agent were reported in Wuhan, China. A novel coronavirus was subsequently identified as the causative pathogen, provisionally named 2019 novel coronavirus <strong>(2019-nCoV)</strong>. <br></p>
+</div>
+<div id="taxonomy" class="section level3">
+<h3>Taxonomy</h3>
+<p>Based on phylogeny, taxonomy and established practice, the Coronavirus Study Group (CSG) formally recognizes this virus as a sister to severe acute respiratory syndrome coronaviruses <strong>SARS-CoVs</strong> and designates it as <strong>SARS-CoV-2</strong>. <br></p>
+</div>
+<div id="origins" class="section level3">
+<h3>Origins</h3>
+<p>Notably, <strong>SARS-CoV-2</strong> is not a descendant of <strong>SARS-CoV</strong>. The introduction of each of these viruses into humans was likely facilitated by unknown external factors, possibly through <a href="https://www.discovermagazine.com/health/why-bats-are-breeding-grounds-for-deadly-diseases-like-ebola-and-sars"><strong>Bats</strong></a> or <a href="https://www.sciencealert.com/the-pangolin-is-now-a-suspect-in-the-coronavirus-outbreak"><strong>Pangolin</strong></a> that were forcibly caged in one of the vet market in China <em>(Video provided below)</em>. <br> <br> <img src="Bats.jpeg" alt="Bat" width="200" /> <img src="pangolincorona_1024.jpeg" alt="Pangolin" width="200" /></p>
+<p><strong><em>Bats (Left)</em></strong> <strong>and</strong> <strong><em>Pangolins (Right)</em></strong> <strong>represent the possible sources many many viruses</strong> <br> <br> <strong>Possible source of Zoonotic transmission of Virus to humans</strong></p>
+<iframe width="360" height="240" src="https://www.youtube.com/embed/Je0_U2ym_r0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+<p><br></p>
+</div>
+<div id="genome-structure" class="section level3">
+<h3>Genome structure</h3>
+<p>The <strong>SARS-CoV-2</strong> genome consists of a single, positive-stranded RNA that is approximately 30k nucleotides long. The overall genome organization is similar to that of other coronaviruses. The genome encodes the open reading frames <em>(ORFs)</em> common to all betacoronaviruses, including <strong>ORF1ab</strong> that encodes many enzymatic proteins, the <strong>spike-surface glycoprotein (S)</strong>, the <strong>small envelope protein (E)</strong>, the <strong>matrix protein (M)</strong>, and the <strong>nucleocapsid protein (N)</strong>, as well as several nonstructural proteins</p>
+<p><img src="Corona_genome_structure.png" alt="SARS-CoV-2 Genome structure (Lu, Roujian et al; January 2020)" width="1000" /> <br></p>
+</div>
+<div id="sturcture-of-the-virus" class="section level3">
+<h3>Sturcture of the Virus</h3>
+<p>Using cryo-electron microscopy (cryo-EM), researchers around the world are trying to understand its infection of human cells. These cryo-EM researchers were able to determine the structure of SARS-CoV-2 spike protein and its cellular receptor during infection. In recent years, cryo-EM has become a popular and effective method for biological research – studying the structure of biologically important molecules like proteins and viruses at near-atomic resolution to better understand 3D structure and functionality. These findings will support and accelerate design of vaccines and the development of treatments for COVID-19. Researchers have made their structures from cryo-EM publicly available.</p>
+<div class="figure">
+<img src="COVID19_structure.png" alt="SARS-CoV-2 structure (image courtesy of CDC)" width="500" />
+<p class="caption"><strong>SARS-CoV-2 structure</strong> (<em>image courtesy of <a href="https://phil.cdc.gov/details.aspx?pid=23312">CDC</a></em>)</p>
+</div>
+<p>A computer rendering of a coronavirus, showing the characteristic “crown-like” <em>glycoprotein</em> spikes that inspired their name. <strong>Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)</strong>, which causes <strong>COVID-19</strong>, belongs to this virus group</p>
+</div>
+</div>
+
+<p><b>Copyright &copy; 2020 Abhilash Kannan.</b></p>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
